@@ -79,7 +79,7 @@ EOS
 chmod +x /app/run-all.sh
 
 echo "🕒 Setting up cron every 58 minutes..."
-echo "*/58 * * * * /app/run-all.sh >> /var/log/vlayer-cron.log 2>&1" | crontab -
+echo "*/15 * * * * /app/run-all.sh >> /var/log/vlayer-cron.log 2>&1" | crontab -
 service cron start
 
 echo "🌐 Internal container IP:"
